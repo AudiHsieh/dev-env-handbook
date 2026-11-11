@@ -24,7 +24,7 @@
 
 版本與檢查指令:
 
-- Vivado / Vitis / Vitis HLS 2022.2:安裝於 `C:Xilinx`(2026-11-11 確認),檢查:`ls /c/Xilinx/Vivado`(Git Bash)
+- Vivado / Vitis / Vitis HLS 2022.2:安裝於 `C:\Xilinx\`(2026-11-11 確認),檢查:`ls /c/Xilinx/Vivado`(Git Bash)
 - PetaLinux:版本未記錄(待實測後補)
 
 ## 2. 安裝狀態
