@@ -2,7 +2,7 @@
 
 適用電腦:Windows 11(使用者 `audi1`)。本手冊只記錄開發環境分工與工具安裝狀態,不含特定專案或板子的設定。
 
-最後更新:2026-11-09
+最後更新:2026-11-11
 
 ---
 
@@ -22,7 +22,10 @@
 | PetaLinux | VMware 內 Ubuntu 20.04 VM | petalinux-create/config/build、build script、embedded C 應用與驅動 |
 | Vivado / Vitis | 原生 Windows(不在 VM 內) | Verilog/SystemVerilog RTL 存在 Windows 端 Vivado 專案 |
 
-版本與檢查指令:未記錄(待實測後補)。
+版本與檢查指令:
+
+- Vivado / Vitis / Vitis HLS 2022.2:安裝於 `C:Xilinx`(2026-11-11 確認),檢查:`ls /c/Xilinx/Vivado`(Git Bash)
+- PetaLinux:版本未記錄(待實測後補)
 
 ## 2. 安裝狀態
 
