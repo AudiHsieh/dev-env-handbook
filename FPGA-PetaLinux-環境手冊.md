@@ -27,6 +27,10 @@
 - Vivado / Vitis / Vitis HLS 2022.2:安裝於 `C:\Xilinx\`(2026-11-11 確認),檢查:`ls /c/Xilinx/Vivado`(Git Bash)
 - PetaLinux:版本未記錄(待實測後補)
 
+已知限制:
+
+- Vivado / Vitis(xsct)/ xsdb 2022.2 不支援含中文的路徑(2026-11-11 實測:Vivado `Failed to open zip archive ...hwdef`)。專案放在中文路徑下時,build 與 xsdb 下載改在 ASCII 目錄(例:`%TEMP%\zcu102_build`)進行,產出再拷回專案。
+
 ## 2. 安裝狀態
 
 | 工具 | 狀態 | 檢查指令 | 缺少時 |
