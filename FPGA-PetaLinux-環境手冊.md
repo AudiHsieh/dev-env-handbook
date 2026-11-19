@@ -2,7 +2,7 @@
 
 適用電腦:Windows 11(使用者 `audi1`)。本手冊只記錄開發環境分工與工具安裝狀態,不含特定專案或板子的設定。
 
-最後更新:2026-11-11
+最後更新:2026-11-19
 
 ---
 
@@ -24,8 +24,22 @@
 
 版本與檢查指令:
 
+- Vivado / Vitis 2025.2:安裝於 `C:\AMDDesignTools\2025.2\`(2026-11-19 確認),檢查:`ls /c/AMDDesignTools/2025.2/Vivado/bin/vivado.bat /c/AMDDesignTools/2025.2/Vitis/bin/xsdb.bat`(Git Bash)
+  - 目錄結構與 2022.2 相反:版本目錄在上層,`<安裝根>\2025.2\Vivado\bin`、`<安裝根>\2025.2\Vitis\bin`(2022.2 為 `C:\Xilinx\Vivado\2022.2\bin`)。寫腳本找工具時兩種結構要分開處理。
+  - xsdb 在 `Vitis\bin\xsdb.bat`(`Vivado\bin\xsdb.bat` 也有);`[version]` 回傳 `2025.2`,隨附 hw_server v2025.2(2026-11-19 實測 `connect; targets` 可執行)。
+  - `C:\Xilinx\2025.2\Vitis\` 只有空的 `bin`,不是完整安裝,不要用。
 - Vivado / Vitis / Vitis HLS 2022.2:安裝於 `C:\Xilinx\`(2026-11-11 確認),檢查:`ls /c/Xilinx/Vivado`(Git Bash)
 - PetaLinux:版本未記錄(待實測後補)
+
+2022.2 → 2025.2 版本差異(本機安裝檔目錄比對,2026-11-19):
+
+| 項目 | 2022.2 | 2025.2 | 備註 |
+|---|---|---|---|
+| Aurora 64B66B IP | v12.0 | v13.0 | 依 13.0 instantiation template 比對,master/slave port 名稱與 v12.0 相同 |
+| VIO IP | v3.0 | v3.0 | 不變 |
+| lwIP 函式庫(embeddedsw) | `lwip211`(v1.5~v1.8) | `lwip220`(v1.0~v1.3) | lwIP 2.1.1 → 2.2.0;BSP 設定名稱是否改動未確認 |
+| XSCT | 主要腳本工具 | 仍隨附(`Vitis\bin\xsct.bat`),啟動時提示改用 Python CLI(`vitis -i` 互動、`vitis -s <script>` 腳本) | 舊 xsct 腳本在 2025.2 是否完全相容未確認 |
+| xsdb | `Vitis\2022.2\bin\xsdb.bat` | `2025.2\Vitis\bin\xsdb.bat` | 用法不變 |
 
 已知限制:
 
