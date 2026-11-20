@@ -51,3 +51,4 @@
 |---|---|---|---|
 | WSL | 未安裝(2026-09-11 首次確認,2026-11-03 再確認) | `wsl --status`(未安裝時提示執行 `wsl.exe --install`) | 安裝前先問使用者 |
 | cocotb / UVM(硬體驗證框架) | 未安裝 | 未記錄 | 安裝前先問使用者 |
+| Tera Term(序列終端機,板測主控台截圖用) | 已安裝 5.7.1(2026-11-20,使用者同意;winget `TeraTermProject.teraterm`),路徑 `%LOCALAPPDATA%\Programs\teraterm5\`(`ttermpro.exe`、巨集 `ttpmacro.exe`) | `Test-Path "$env:LOCALAPPDATA\Programs\teraterm5\ttermpro.exe"` | `winget install --id TeraTermProject.teraterm -e` |
