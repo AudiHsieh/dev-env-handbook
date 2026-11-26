@@ -2,7 +2,7 @@
 
 適用電腦:Windows 11(使用者 `audi1`)。本手冊只記錄開發環境分工與工具安裝狀態,不含特定專案或板子的設定。
 
-最後更新:2026-11-19
+最後更新:2026-11-26
 
 ---
 
@@ -44,6 +44,7 @@
 已知限制:
 
 - Vivado / Vitis(xsct)/ xsdb 2022.2 不支援含中文的路徑(2026-11-11 實測:Vivado `Failed to open zip archive ...hwdef`)。專案放在中文路徑下時,build 與 xsdb 下載改在 ASCII 目錄(例:`%TEMP%\zcu102_build`)進行,產出再拷回專案。
+- Python 2 工具（例：AMD BoardUI）遇到中文名稱的 COM port（藍牙序列埠）會 UnicodeEncodeError：先在裝置管理員停用或移除該 port。
 
 ## 2. 安裝狀態
 
